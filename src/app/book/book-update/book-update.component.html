@@ -1,0 +1,76 @@
+<!--<h1>Edit book</h1>-->
+<!--<form [formGroup]="bookForm" (ngSubmit)="update()">-->
+<!--  <div>-->
+<!--    <label for="title">Nhap tieu de</label>-->
+<!--    <input type="text" formControlName="title" id="title">-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <label for="author">Nhap tac gia</label>-->
+<!--    <input type="text" formControlName="author" id="author">-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <label for="description">Nhap mo ta sach</label>-->
+<!--    <input type="text" formControlName="description" id="description">-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <button>Chinh sua</button>-->
+<!--  </div>-->
+
+<!--</form>-->
+
+<h1>Edit product</h1>
+<a routerLink="/">Danh sách Book</a>
+<br>
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Book management</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">Edit product</li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Edit book</h3>
+          </div>
+          <form  [formGroup]="bookForm" (ngSubmit)="update()">
+            <input type="hidden" id="id" name="id" formControlName="id">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" formControlName="title">
+              </div>
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" formControlName="author">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea cols="50" rows="4" type="text" class="form-control" id="description" formControlName="description"></textarea>
+              </div>
+
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Edit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
+

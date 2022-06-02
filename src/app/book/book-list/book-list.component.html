@@ -1,0 +1,58 @@
+
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Book management</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <a class="btn btn-primary" routerLink="/create">Add new book</a>
+            </h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="products" class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Stt</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let book of books; index as i">
+                <td>{{i+1}}</td>
+                <td><a routerLink="/profile/{{book.id}}">{{book.title}}</a></td>
+                <td>{{book.author}}</td>
+                <td>
+                  <a class="btn btn-warning" routerLink="/edit/{{book.id}}">
+                    <span class="fas fa-edit"></span>
+                  </a>
+                </td>
+                <td>
+                  <a class="btn btn-danger" routerLink="/delete/{{book.id}}">
+                    <span class="fas fa-trash"></span>
+                  </a>
+
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
